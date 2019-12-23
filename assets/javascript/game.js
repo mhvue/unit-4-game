@@ -14,25 +14,33 @@ var userAddedNum= 0; // numbers added from crystals by user
 var wins="";
 var losses = "";
 
-//for each crystal to generate a random number 
-var blueRandomNum =Math.floor(Math.random()* 20) +1;
-var redRandomNum =Math.floor(Math.random()* 20) +1;
-var whiteRandomNum=Math.floor(Math.random()* 20) +1;
-var whitePurpleRandomNum=Math.floor(Math.random()* 20) +1;
+//for each crystal to generate a random number. *need to look in how to make sure numbers are not repeats 
+var blueRandomNum =Math.floor(Math.random()* 5) +1;
+var redRandomNum =Math.floor(Math.random()* 5) +1;
+var whiteRandomNum=Math.floor(Math.random()* 5) +1;
+var whitePurpleRandomNum=Math.floor(Math.random()* 5) +1;
 
 //reset
-//var newGame = function () {
+var newGame = function () {
+    computerNum
+    userAddedNum = 0;
+    blueRandomNum = Math.floor(Math.random() * 5) + 1;
+    redRandomNum = Math.floor(Math.random() * 5) + 1;
+    whiteRandomNum = Math.floor(Math.random() * 5) + 1;
+    whitePurpleRandomNum = Math.floor(Math.random() * 5) + 1;
+   
+};
 
 
 //START: when html is loaded,  user will see random generated number and four crstyals on the bottom 
 
 $(document).ready(function() {
+
+        computerNum= Math.floor(Math.random() * 20) + 1;
+        console.log(computerNum);
     
-    computerNum= Math.floor(Math.random() * 20) + 1;
-    console.log(computerNum);
 
     $("#computerNum").append("You must equal: " + computerNum);
-
 
 
     
@@ -41,11 +49,11 @@ $(document).ready(function() {
     //for(var i = 0; i < crystalNumbers.length;i++) {
         crystalButtons.addClass("crystalClass");
 
-    //so that every pic will generate a random number 
+    //so that every crystal will generate a random number 
         $("#blueCrystal").attr("crystalHiddenVal", blueRandomNum);
-        $("#redCrystal").attr("crystalHiddenVal2", redRandomNum);
-        $("#whiteCrystal").attr("crystalHiddenVal3", whiteRandomNum);
-        $("#whitePurpleCrystal").attr("crystalHiddenVal4", whitePurpleRandomNum);
+        $("#redCrystal").attr("crystalHiddenVal", redRandomNum);
+        $("#whiteCrystal").attr("crystalHiddenVal", whiteRandomNum);
+        $("#whitePurpleCrystal").attr("crystalHiddenVal", whitePurpleRandomNum);
         
 
 
@@ -55,25 +63,31 @@ $(document).ready(function() {
 $(".crystalClass").on("click", function() {
 
         var crystalNumVal = ($(this).attr("crystalHiddenVal"));
-       // crystalNumVal= parseInt(crystalNumVal);
+        crystalNumVal= parseInt(crystalNumVal);
         userAddedNum += crystalNumVal; // addition of user's picks as user picks crystals
         $("#userNum").text(userAddedNum);
 
-        console.log("hello");
+        //console.log(crystalNumVal);
 
 
-        if (crystalNumVal === computerNum) {
+        if (userAddedNum === computerNum) {
+            wins++;
             $("#userWins").text(wins);
-            alert("You Win!");
-        }
-        else if (crystalNumVal > computerNum) {
-            $("#userLoss").text(losses);
-            alert("You Lose");
+            alert("You were able to add up to " + computerNum +".  You win!");
+            newGame();
+
         }
 
+         if (userAddedNum > computerNum) {
+            losses++;
+            $("#userLoss").text(losses);
+            alert("Uh Oh! Your added numbers were too high. You Lose");
+            newGame();
+        }
         
 
     });
+
 
 
 });
