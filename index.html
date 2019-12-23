@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+<h1>Crystal Collector</h1>
+
+<div>
+<p>Instructions:
+<ul>
+    <li>Click each crystal to add points to equal the shown number.
+        <br>
+    *Each crystal's value are hidden!*</li>
+    <li>When your added number matches the generated number shown, You Win! The game will reset.</li>
+    <li>If your added number is greater than the generated number shown, You lose! The game will reset.</li>
+    <li>IMPORTANT: The hidden value of the crystals change per reset</li>
+</ul>
+Have Fun. Good Luck!
+</p>
+</div>
+
+<div id = "computerNum"></div>
+<br>
+<div>Wins:<div id="userWins"></div></div>
+<div>Losses: <div id="userLoss"></div> </div>
+
+<div class="crystal-container">
+<img id="blueCrystal" src= "assets/images/blue-crystal.jpg" width = "300" alt="blue crystal">
+<img id= "redCrystal" src= "assets/images/red-crystal.jpg" width = "300" alt="red crystal">
+<img id= "whiteCrystal"src= "assets/images/white-crystal.jpg" width = "250" alt="white crystal">
+<img id="whitePurpleCrystal" src= "assets/images/white-purple-crystal.jpg" width = "280" alt="white with some purple on top crystal"> 
+</div>
+
+<div>Your total so far: <br></div>
+<div id="userNum"></div>
+
+</body>
+</html>
