@@ -1,0 +1,28 @@
+body {
+    background-image: url('../images/caves-background.jpg');
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    text-align:center;
+}
+
+h3, .info,#computerNum, #userWins, #userLoss, .scoreText{
+    color: white;
+    font-size: 25px;
+    text-align:center;
+}
+
+
+ #totalText {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+.crystal-container {
+    margin-left: 200px;
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </head>
@@ -12,24 +14,25 @@
 <h1>Crystal Collector</h1>
 
 <div>
-<p>Instructions:
-<ul>
-    <li>Click each crystal to add points to equal the shown number.
+<h3>Instructions:</h3>
+<ol>
+    <li class="info">Click each crystal to add numbers to equal the shown number.
         <br>
-    *Each crystal's value are hidden!*</li>
-    <li>When your added number matches the generated number shown, You Win! The game will reset.</li>
-    <li>If your added number is greater than the generated number shown, You lose! The game will reset.</li>
-    <li>IMPORTANT: The hidden value of the crystals change per reset</li>
-</ul>
-Have Fun. Good Luck!
-</p>
-</div>
+    *Each crystal's value are hidden*</li>
+    <li class="info">When your added number matches the generated number shown, You Win! The game will reset.</li>
+    <li class="info">If your added number is greater than the generated number shown, You lose! The game will reset.</li>
+    <li class="info">IMPORTANT: The hidden value of the crystals change per reset</li>
+</ol>
+<h3>Have Fun. Good Luck!</h3>
 
+</div>
+<br>
 <div id = "computerNum"></div>
 <br>
-<div>Wins:<span id="userWins"></span></div>
-<div>Losses: <span id="userLoss"></span></div>
-
+<div class ="scoreText">Wins:<span id="userWins"></span></div>
+<div class ="scoreText">Losses: <span id="userLoss"></span></div>
+<br>
+<div id="totalText">Your total so far:<span id="userNum"></span></div>
 <div class="crystal-container">
 <img id="blueCrystal" src= "assets/images/blue-crystal.jpg" width = "300" alt="blue crystal">
 <img id= "redCrystal" src= "assets/images/red-crystal.jpg" width = "300" alt="red crystal">
@@ -37,7 +40,7 @@ Have Fun. Good Luck!
 <img id="whitePurpleCrystal" src= "assets/images/white-purple-crystal.jpg" width = "280" alt="white with some purple on top crystal"> 
 </div>
 
-<div>Your total so far:<span id="userNum"></span></div>
+
 
 </body>
 </html>
