@@ -25,7 +25,8 @@ var newGame =function () {
     computerNum= Math.floor(Math.random() * 20) + 1;
     $("#computerNum").text("You must equal: " + computerNum);
 
-    userAddedNum = 0;
+    userAddedNum =0;
+    $("#userNum").text(" ");
     
     blueRandomNum = Math.floor(Math.random() * 5) + 1;
     $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
