@@ -20,16 +20,28 @@ var redRandomNum =Math.floor(Math.random()* 5) +1;
 var whiteRandomNum=Math.floor(Math.random()* 5) +1;
 var whitePurpleRandomNum=Math.floor(Math.random()* 5) +1;
 
-//reset
-var newGame = function () {
-    computerNum
+
+var newGame =function () {
+    computerNum= Math.floor(Math.random() * 20) + 1;
+    $("#computerNum").text("You must equal: " + computerNum);
+
     userAddedNum = 0;
+    
     blueRandomNum = Math.floor(Math.random() * 5) + 1;
+    $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
+
     redRandomNum = Math.floor(Math.random() * 5) + 1;
+    $("#redCrystal").attr("crystalHidden-data", redRandomNum);
+
     whiteRandomNum = Math.floor(Math.random() * 5) + 1;
+    $("#whiteCrystal").attr("crystalHidden-data", whiteRandomNum);
+
     whitePurpleRandomNum = Math.floor(Math.random() * 5) + 1;
+    $("#whitePurpleCrystal").attr("crystalHidden-data", whitePurpleRandomNum);
    
+
 };
+
 
 
 //START: when html is loaded,  user will see random generated number and four crstyals on the bottom 
@@ -46,14 +58,13 @@ $(document).ready(function() {
     
     //create a class so can click on any pic on html
     var crystalButtons= $("#blueCrystal, #redCrystal,#whiteCrystal, #whitePurpleCrystal");
-    //for(var i = 0; i < crystalNumbers.length;i++) {
         crystalButtons.addClass("crystalClass");
 
-    //so that every crystal will generate a random number 
-        $("#blueCrystal").attr("crystalHiddenVal", blueRandomNum);
-        $("#redCrystal").attr("crystalHiddenVal", redRandomNum);
-        $("#whiteCrystal").attr("crystalHiddenVal", whiteRandomNum);
-        $("#whitePurpleCrystal").attr("crystalHiddenVal", whitePurpleRandomNum);
+    //so that every crystal will generate a random number attached to the attributes 
+        $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
+        $("#redCrystal").attr("crystalHidden-data", redRandomNum);
+        $("#whiteCrystal").attr("crystalHidden-data", whiteRandomNum);
+        $("#whitePurpleCrystal").attr("crystalHidden-data", whitePurpleRandomNum);
         
 
 
@@ -62,7 +73,7 @@ $(document).ready(function() {
 
 $(".crystalClass").on("click", function() {
 
-        var crystalNumVal = ($(this).attr("crystalHiddenVal"));
+        var crystalNumVal = ($(this).attr("crystalHidden-data"));
         crystalNumVal= parseInt(crystalNumVal);
         userAddedNum += crystalNumVal; // addition of user's picks as user picks crystals
         $("#userNum").text(userAddedNum);
@@ -84,9 +95,11 @@ $(".crystalClass").on("click", function() {
             alert("Uh Oh! Your added numbers were too high. You Lose");
             newGame();
         }
-        
+
 
     });
+
+       
 
 
 
