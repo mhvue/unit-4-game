@@ -14,11 +14,11 @@ var userAddedNum= 0; // numbers added from crystals by user
 var wins="";
 var losses = "";
 
-//for each crystal to generate a random number. *need to look in how to make sure numbers are not repeats 
+//for each crystal to generate a random number. *need to look in how to make sure numbers are not repeats {
 var blueRandomNum =Math.floor(Math.random()* 5) +1;
 var redRandomNum =Math.floor(Math.random()* 5) +1;
 var whiteRandomNum=Math.floor(Math.random()* 5) +1;
-var whitePurpleRandomNum=Math.floor(Math.random()* 5) +1;
+var whitePurpleRandomNum=Math.floor(Math.random()* 5) +1
 
 
 var newGame =function () {
@@ -61,6 +61,7 @@ $(document).ready(function() {
     var crystalButtons= $("#blueCrystal, #redCrystal,#whiteCrystal, #whitePurpleCrystal");
         crystalButtons.addClass("crystalClass");
 
+
     //so that every crystal will generate a random number attached to the attributes 
         $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
         $("#redCrystal").attr("crystalHidden-data", redRandomNum);
@@ -90,10 +91,10 @@ $(".crystalClass").on("click", function() {
 
         }
 
-         if (userAddedNum > computerNum) {
+         if (userAddedNum >computerNum) {
             losses++;
             $("#userLoss").text(losses);
-            alert("Uh Oh! Your added numbers were too high. You Lose");
+            alert("Uh Oh! Your added numbers were " + userAddedNum + "." + " That's too high. You Lose");
             newGame();
         }
 
