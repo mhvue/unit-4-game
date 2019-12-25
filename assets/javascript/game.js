@@ -15,29 +15,29 @@ var wins="";
 var losses = "";
 
 //for each crystal to generate a random number. *need to look in how to make sure numbers are not repeats {
-var blueRandomNum =Math.floor(Math.random()* 5) +1;
-var redRandomNum =Math.floor(Math.random()* 5) +1;
-var whiteRandomNum=Math.floor(Math.random()* 5) +1;
-var whitePurpleRandomNum=Math.floor(Math.random()* 5) +1
+var blueRandomNum =Math.floor(Math.random()* 12) +1;
+var redRandomNum =Math.floor(Math.random()* 12) +1;
+var whiteRandomNum=Math.floor(Math.random()* 12) +1;
+var whitePurpleRandomNum=Math.floor(Math.random()* 12) +1
 
 
 var newGame =function () {
-    computerNum= Math.floor(Math.random() * 20) + 1;
+    computerNum= Math.floor(Math.random() * 102) + 19;
     $("#computerNum").text("You must equal: " + computerNum);
 
     userAddedNum =0;
     $("#userNum").text(" ");
     
-    blueRandomNum = Math.floor(Math.random() * 5) + 1;
+    blueRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
 
-    redRandomNum = Math.floor(Math.random() * 5) + 1;
+    redRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#redCrystal").attr("crystalHidden-data", redRandomNum);
 
-    whiteRandomNum = Math.floor(Math.random() * 5) + 1;
+    whiteRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#whiteCrystal").attr("crystalHidden-data", whiteRandomNum);
 
-    whitePurpleRandomNum = Math.floor(Math.random() * 5) + 1;
+    whitePurpleRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#whitePurpleCrystal").attr("crystalHidden-data", whitePurpleRandomNum);
    
 
@@ -49,7 +49,7 @@ var newGame =function () {
 
 $(document).ready(function() {
 
-        computerNum= Math.floor(Math.random() * 20) + 1;
+        computerNum= Math.floor(Math.random() * 102) + 19;
         console.log(computerNum);
     
 
