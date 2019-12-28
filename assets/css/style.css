@@ -28,3 +28,16 @@ h3, ol,li,#computerNum, #userWins, #userLoss, .scoreText{
 .crystal-container {
     margin-left: 200px;
 }
+
+#blueCrystal:hover {
+    border: 5px solid blue;
+}
+#redCrystal:hover {
+    border: 5px solid red;
+}
+#whiteCrystal:hover {
+    border: 5px solid white;
+}
+#whitePurpleCrystal:hover {
+    border: 5px solid purple;
+}

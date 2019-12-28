@@ -13,6 +13,7 @@ var computerNum= ""; //generated number by computer
 var userAddedNum= 0; // numbers added from crystals by user
 var wins="";
 var losses = "";
+var audio = new Audio ("assests/yay.mp3");
 
 //for each crystal to generate a random number. *need to look in how to make sure numbers are not repeats {
 var blueRandomNum =Math.floor(Math.random()* 12) +1;
@@ -84,6 +85,7 @@ $(".crystalClass").on("click", function() {
 
 
         if (userAddedNum === computerNum) {
+            audio.play();
             wins++;
             $("#userWins").text(wins);
             alert("You were able to add up to " + computerNum +".  You win!");
