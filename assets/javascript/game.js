@@ -15,11 +15,12 @@ var wins="";
 var losses = "";
 var audio = new Audio ("assests/yay.mp3");
 
-//for each crystal to generate a random number. *need to look in how to make sure numbers are not repeats {
-var blueRandomNum =Math.floor(Math.random()* 12) +1;
-var redRandomNum =Math.floor(Math.random()* 12) +1;
-var whiteRandomNum=Math.floor(Math.random()* 12) +1;
-var whitePurpleRandomNum=Math.floor(Math.random()* 12) +1
+//for each crystal to generate a random number. 
+var blueRandomNum = null;
+var redRandomNum =null;
+var whiteRandomNum=null;
+var whitePurpleRandomNum=null;
+
 
 
 var newGame =function () {
@@ -28,10 +29,10 @@ var newGame =function () {
 
     userAddedNum =0;
     $("#userNum").text(" ");
-    
+
     blueRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
-
+    
     redRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#redCrystal").attr("crystalHidden-data", redRandomNum);
 
@@ -40,9 +41,10 @@ var newGame =function () {
 
     whitePurpleRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#whitePurpleCrystal").attr("crystalHidden-data", whitePurpleRandomNum);
-   
 
 };
+
+newGame();
 
 
 
