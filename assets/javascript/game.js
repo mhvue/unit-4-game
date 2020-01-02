@@ -13,7 +13,6 @@ var computerNum= ""; //generated number by computer
 var userAddedNum= 0; // numbers added from crystals by user
 var wins="";
 var losses = "";
-var audio = new Audio ("assests/yay.mp3");
 
 //for each crystal to generate a random number. 
 var blueRandomNum = null;
@@ -87,7 +86,7 @@ $(".crystalClass").on("click", function() {
 
 
         if (userAddedNum === computerNum) {
-            audio.play();
+            $("#sound")[0].play();
             wins++;
             $("#userWins").text(wins);
             alert("You were able to add up to " + computerNum +".  You win!");
@@ -96,6 +95,7 @@ $(".crystalClass").on("click", function() {
         }
 
          if (userAddedNum >computerNum) {
+            $("#sound2")[0].play();
             losses++;
             $("#userLoss").text(losses);
             alert("Uh Oh! Your added numbers were " + userAddedNum + "." + " That's too high. You Lose");
