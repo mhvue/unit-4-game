@@ -21,13 +21,14 @@ var whiteRandomNum=null;
 var whitePurpleRandomNum=null;
 
 
-
 var newGame =function () {
     computerNum= Math.floor(Math.random() * 102) + 19;
     $("#computerNum").text("You must equal: " + computerNum);
 
     userAddedNum =0;
     $("#userNum").text(" ");
+
+    $("#winsLoseMsg").hide();
 
     blueRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#blueCrystal").attr("crystalHidden-data", blueRandomNum);
@@ -41,6 +42,8 @@ var newGame =function () {
     whitePurpleRandomNum = Math.floor(Math.random() * 12) + 1;
     $("#whitePurpleCrystal").attr("crystalHidden-data", whitePurpleRandomNum);
 
+    clearTimeout();
+   
 };
 
 newGame();
@@ -82,25 +85,24 @@ $(".crystalClass").on("click", function() {
         userAddedNum += crystalNumVal; // addition of user's picks as user picks crystals
         $("#userNum").text(userAddedNum);
 
-        //console.log(crystalNumVal);
-
 
         if (userAddedNum === computerNum) {
             $("#sound")[0].play();
             wins++;
             $("#userWins").text(wins);
-            alert("You were able to add up to " + computerNum +".  You win!");
-            newGame();
-
-        }
+            $("#winsLoseMsg").show().html("<h1> You win!</h1>");
+            setTimeout(newGame, 3000);
+            
+        };
 
          if (userAddedNum >computerNum) {
             $("#sound2")[0].play();
             losses++;
             $("#userLoss").text(losses);
-            alert("Uh Oh! Your added numbers were " + userAddedNum + "." + " That's too high. You Lose");
-            newGame();
-        }
+            $("#winsLoseMsg").show().html("<h1> :( You Lose.</h1>");
+            setTimeout(newGame, 3000);
+          
+        };
 
 
     });

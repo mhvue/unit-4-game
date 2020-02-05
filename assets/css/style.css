@@ -1,5 +1,6 @@
 body {
     background-image: url('../images/caves-background.jpg');
+    background-size: 1600px;
     font-family: 'Fjalla One', sans-serif;
 }
 
@@ -9,26 +10,37 @@ h1 {
     text-align:center;
 }
 
-h3, ol,li,#computerNum, #userWins, #userLoss, .scoreText{
+h3, ol,li,#computerNum, #userWins, #userLoss{
     color: white;
     font-size: 25px;
-    text-align:center;
+    text-align: center;
     list-style-position:inside;
     line-height: 40px;
 }
 
 
- #totalText {
+ .scoreText  {
     color: white;
     font-size: 25px;
-    text-align: center;
+    text-align: left;
 }
 
-
-.crystal-container {
-    margin-left: 200px;
+img{
+    width: 200px;
 }
 
+#MsgContainer{
+    position: absolute;
+    left: 800px;
+    top: 440px;
+}
+
+.crystalHolder {
+    position: absolute;
+    bottom: 30px;
+    left: 300px;
+    
+}
 #blueCrystal:hover {
     border: 5px solid blue;
 }

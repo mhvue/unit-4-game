@@ -9,11 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
-    <audio> <sound src="assests/yay.mp3" type="audio/mpeg"></audio>
 </head>
 <body>
 <h1>Crystal Collector</h1>
-
 <div>
 <h3>Instructions:</h3>
 <ol>
@@ -24,23 +22,28 @@
     <li>If your added number is greater than the generated number shown, You lose! The game will reset.</li>
     <li>IMPORTANT: The hidden value of the crystals change per reset</li>
 </ol>
-<h3>Have Fun. Good Luck!</h3>
 
-</div>
-<br>
+<div id="MsgContainer">
+<span id="winsLoseMsg"></span>
 <div id = "computerNum"></div>
 <br>
+<div class ="scoreText">Your total so far:<span id="userNum"></span></div>
+<br><br>
 <div class ="scoreText">Wins:<span id="userWins"></span></div>
 <div class ="scoreText">Losses: <span id="userLoss"></span></div>
-<br>
-<div id="totalText">Your total so far:<span id="userNum"></span></div>
-<div class="crystal-container">
+
+
+</div>
+<div class="crystalHolder">
+<div class="crystalContainer1">
 <img id="blueCrystal" src= "assets/images/blue-crystal.jpg" width = "300" alt="blue crystal">
 <img id= "redCrystal" src= "assets/images/red-crystal.jpg" width = "300" alt="red crystal">
+</div>
+<div class="crystalContainer2">
 <img id= "whiteCrystal"src= "assets/images/white-crystal.jpg" width = "250" alt="white crystal">
 <img id="whitePurpleCrystal" src= "assets/images/white-purple-crystal.jpg" width = "280" alt="white with some purple on top crystal"> 
 </div>
-
+</div>
 <audio id="sound">
     <source src="assets/service-bell.mp3" type="audio/mpeg">
 </audio>
