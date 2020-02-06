@@ -90,8 +90,9 @@ $(".crystalClass").on("click", function() {
             $("#sound")[0].play();
             wins++;
             $("#userWins").text(wins);
-            $("#winsLoseMsg").show().html("<h1> You win!</h1>");
-            setTimeout(newGame, 3000);
+            $("#winsLoseMsg").show().html("<h1>" + "   You win!</h1>").css(
+                {"background-color": "green", "padding" : "15px"});
+            setTimeout(newGame, 5000);
             
         };
 
@@ -99,10 +100,13 @@ $(".crystalClass").on("click", function() {
             $("#sound2")[0].play();
             losses++;
             $("#userLoss").text(losses);
-            $("#winsLoseMsg").show().html("<h1> :( You Lose.</h1>");
-            setTimeout(newGame, 3000);
+            $("#winsLoseMsg").show().html("<h1>You Lose.</h1>").css(
+                { "background-color": "orange", "padding": "15px"});
+            setTimeout(newGame, 5000);
           
         };
+
+
 
 
     });
