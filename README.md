@@ -1,7 +1,4 @@
 # Crystal Collector
-
-Crystal Collector Game
-
 A game in which the user selects crystals with hidden numerical values to add up to number shown on screen.  
 
 ## How to Play
