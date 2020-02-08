@@ -49,7 +49,6 @@ var newGame =function () {
 newGame();
 
 
-
 //START: when html is loaded,  user will see random generated number and four crstyals on the bottom 
 
 $(document).ready(function() {
