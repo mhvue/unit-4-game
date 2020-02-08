@@ -1,8 +1,8 @@
 # Crystal Collector
 
-Crystal Collector Game - jQuery based.
+Crystal Collector Game
 
-A game in which the user must select crystals with hidden numerical values to add up to number shown on screen.  
+A game in which the user selects crystals with hidden numerical values to add up to number shown on screen.  
 
 ## How to Play
 Instructions are listed:
@@ -21,3 +21,4 @@ This is the starting screen displayed. Number generated on screen is random. Thi
 Play the game: https://mhvue.github.io/unit-4-game
 
 
+This game is developed with jQuery, Javascript, HTML5 and CSS. 
