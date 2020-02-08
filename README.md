@@ -14,8 +14,8 @@ This is the starting screen displayed. Number generated on screen is random. Thi
 <img src= "assets/images/crystalsScoreLogo.jpg">
 
  The game will reset per win and per loss. The number generated will then reset as well, displaying a new number.  The numbers of wins and losses will stay on screen. Per reset, "Your total so far" will always empty.  
- 
-<img src="assets/images/crystalsScoreLogo2.jpg>
+
+<img src="assets/images/crystalsScoreLogo2.jpg">
 
 
 Play the game: https://mhvue.github.io/unit-4-game
