@@ -18,6 +18,10 @@ h3, ol,li,#computerNum, #userWins, #userLoss{
     line-height: 40px;
 }
 
+.modal-header, .modal-body, h4{
+    margin: 0 auto;
+}
+
 
  .scoreText  {
     color: white;
@@ -37,14 +41,6 @@ img{
     padding: 30px;
 }
 
-#winsLoseMsg {
-    position: absolute;
-    z-index: 1;
-    left: 45%;
-    top: 30%;
-    font-weight: bold;
-    
-}
 
 .crystalHolder {
     position: absolute;
